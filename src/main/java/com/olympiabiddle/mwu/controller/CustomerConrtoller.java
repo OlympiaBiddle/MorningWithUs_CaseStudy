@@ -1,0 +1,22 @@
+package com.olympiabiddle.mwu.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.olympiabiddle.mwu.entity.Customer;
+import com.olympiabiddle.mwu.service.CustomerService;
+
+@Controller
+public class CustomerConrtoller {
+	@Autowired private CustomerService service;
+	
+	@GetMapping("/register")
+	public String showRegisterForm(Model model) {
+		model.addAttribute("pageTitle", "Customer Registration");
+		model.addAttribute("customer", new Customer());
+		return "register/register_form";
+	}
+	
+}

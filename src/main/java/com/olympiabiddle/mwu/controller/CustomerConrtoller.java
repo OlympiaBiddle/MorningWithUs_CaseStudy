@@ -12,11 +12,29 @@ import com.olympiabiddle.mwu.service.CustomerService;
 public class CustomerConrtoller {
 	@Autowired private CustomerService service;
 	
-	@GetMapping("/register")
-	public String showRegisterForm(Model model) {
-		model.addAttribute("pageTitle", "Customer Registration");
-		model.addAttribute("customer", new Customer());
-		return "register/register_form";
+//	@GetMapping("/register")
+//	public String showRegisterForm(Model model) {
+//		model.addAttribute("pageTitle", "Customer Registration");
+//		model.addAttribute("customer", new Customer());
+//		return "register/register_form";
+//	}
+	
+	@GetMapping("/index")
+	public String home(Model model) {
+		return "index";
 	}
 	
+	@GetMapping("/register")
+	public String register(Model model) {
+		return "register";
+	}
+	
+	@GetMapping("/login")
+	public String login(Model model) {
+		return "login";
+	}
+	@GetMapping("/menu")
+	public String menu(Model model) {
+		return "menu";
+	}
 }

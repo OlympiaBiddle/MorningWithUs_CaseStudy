@@ -4,13 +4,14 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Login - Mornings With Us</title>
+   <title>Home - Mornings With Us</title>
 
-   <!-- font awesome cdn link  -->
+   <!-- font awesome cdn link-->  
+  
    <link rel="stylesheet" type="text/css" th:href="@{/fontAwesome/all.css}">
-   
+  
    <!-- custom css file link  -->
-   <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 
 </head>
 <body>
@@ -19,10 +20,10 @@
 
    <section class="flex">
 
-      <a th:href="@{home.html}" class="logo">Mornings With Us</a>
+      <a th:href="@{index.html}" class="logo">Mornings With Us</a>
 
       <nav class="navbar">
-         <a th:href="@{home}">home</a>
+         <a th:href="@{index}">home</a>
          <a th:href="@{about}">about</a>
          <a th:href="@{menu}">menu</a>
          <a th:href="@{orders}">orders</a>
@@ -86,18 +87,21 @@
 
         <div class="box">
             <h3>Follow us on: </h3>
-            <a th:href="@{https://www.facebook.com" class="fa fa-facebook}"></a>
-            <a th:href="@{https://www.twitter.com" class="fa fa-twitter}"></a>
-            <a th:href="@{https://www.linkedin.com" class="fa fa-linkedin}"></a>
+              
+            <a th:href="@{https://www.facebook.com}" class="fa-brands fa-facebook"></a>
+            <a th:href="@{https://www.twitter.com}" class="fa-brands fa-twitter"></a>
+            <a th:href="@{https://www.linkedin.com}" class="fa-brands fa-linkedin"></a>
+        
         </div>
 
     </section>
 
-    <div class="credit"> @ 2022 by <span>Olympia Biddle</span> | PerSchola Capstone!</div>
+    <div class="credit">by <span>Olympia Biddle</span> @ 2022  | PerSchola Capstone!</div>
 
 </footer>
  
+ 
  <script th:src="@{/js/script.js}"></script>
-    
+  
 </body>
 </html>

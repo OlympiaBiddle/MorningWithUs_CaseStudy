@@ -49,21 +49,38 @@
 
 </header>
 
-<!-- forms  -->
-<section class="form-container">
+<!-- orders -->
+<div class="heading">
+    <h3>your orders</h3>
+    <p><a th:href="@{home.html}">home </a> <span> / orders</span></p>
+ </div>
+ 
+ <section class="orders">
+ 
+    <h1 class="title">placed orders</h1>
+ 
+    <div class="box-container">
+ 
+       <div class="box">
+          <p> placed on : <span>placeholder</span> </p>
+          <p> name : <span>placeholder</span> </p>
+          <p> number : <span>placeholder</span> </p>
+          <p> your orders : <span>placeholder</span> </p>
+          <p> total price : <span>placeholder</span> </p>
+       </div>
+ 
+       <div class="box">
+          <p> placed on : <span>placeholder</span> </p>
+          <p> name : <span>placeholder</span> </p>
+          <p> number : <span>placeholder</span> </p>
+          <p> your orders : <span>placeholder</span> </p>
+          <p> total price : <span>placeholder</span> </p>
+       </div>
+ 
+    </div>
+ 
+ </section>
 
-        <form action="" method="post">
-            <h3>login now</h3>
-            <input type="email" required maxlength="50" name="email" placeholder="enter your email" class="box"
-                oninput="this.value = this.value.replace(/\s/g, '')">
-            <input type="password" required maxlength="20" name="pass" placeholder="enter your password" class="box"
-                oninput="this.value = this.value.replace(/\s/g, '')">
-            <input type="submit" value="login now" class="btn" name="submit">
-            <p>don't have an account? <a th:href="@{register}">register now</a></p>
-        </form>
-
-    </section>
-    
 <!-- footer -->
 
 <footer class="footer">
@@ -112,5 +129,8 @@
  
  <script th:src="@{/js/script.js}"></script>
     
+</body>
+</html>
+
 </body>
 </html>

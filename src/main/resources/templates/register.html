@@ -19,7 +19,7 @@
 
    <section class="flex">
 
-      <a th:href="@{home.html}" class="logo">Mornings With Us</a>
+      <a th:href="@{index}" class="logo">Mornings With Us</a>
 
       <nav class="navbar">
          <a th:href="@{index}">home</a>
@@ -52,15 +52,35 @@
 
 <section class="form-container">
 
-   <form action="" method="post">
+   <form the:action="@{/create_customer}" method="post" th:object="${customer}">
       <h3>register now</h3>
-      <input type="text" required maxlength="20" name="firstname" placeholder="enter your first name" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="text" required maxlength="20" name="lastname" placeholder="enter your last name" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="email" required maxlength="50" name="email" placeholder="enter your email" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="numner" min="0" max="9999999999" onkeypress="if(this.value.length == 10) return false;" placeholder="enter your number" required class="box" name="number">
-      <input type="password" required maxlength="20" name="pass" placeholder="enter your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" required maxlength="20" name="cpass" placeholder="confirm your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="submit" value="register now" class="btn" name="submit">
+<!--      
+      <input type="text" th:field="*{firstName}" placeholder="enter your first name" class="box" 
+      		maxlength="45" minlength="2" oninput="this.value = this.value.replace(/\s/g, '')" 
+      		required="required"/>
+      
+      <input type="text"  th:field="*{lastName}" placeholder="enter your last name"
+      		maxlength="35" minlength="2"  class="box" oninput="this.value = this.value.replace(/\s/g, '')"
+      		required="required"/>
+      
+      <input type="email" th:field="*{email}"  placeholder="enter your email" class="box" 
+      		maxlength="45" oninput="this.value = this.value.replace(/\s/g, '')"
+      		required="required"/>
+      
+      <input type="number" th:field="*{phoneNumber}"  placeholder="enter your number" class="box"
+      		min="0" max="9999999999" onkeypress="if(this.value.length == 10) return false;"
+      		required="required"/>
+-->     
+      <input type="password" th:field="*{password}" id="password" placeholder="enter your password" class="box" 
+      		maxlength="15" minlength="6" required="required"
+      		onkeyup="checkPasswordMatch();"
+      		/>
+      
+      <input type="password" id="confirmPassword" placeholder="retype your password" class="box" 
+      		 maxlength="15" minlength="6" required="required"
+      		 onkeyup="checkPasswordMatch();"/>
+      
+      <input type="submit" value="register now" class="btn" name="submit"/>
       <p>already have an account? <a href="login.html">login now</a></p>
    </form>
 
@@ -110,11 +130,10 @@
 
     </section>
 
-    <div class="credit">by <span>Olympia Biddle</span> @ 2022  | PerSchola Capstone!</div>
+    <div class="credit"> <span>Olympia Biddle</span> @ 2022  - PerSchola Capstone!</div>
 
 </footer>
- 
- <script th:src="@{/js/script.js}"></script>
+<script th:src="@{/js/script.js}"></script>
     
 </body>
 </html>

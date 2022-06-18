@@ -1,0 +1,13 @@
+create table customers(
+id int auto_increment,
+first_name varchar(40) not null,
+last_name varchar(40) not null,
+phone_number varchar(15) not null,
+email varchar(64) not null,
+password varchar(64) not null,
+primary key(id)
+);
+
+
+insert into customers(id, first_name, last_name, phone_number, email, password) values(1, 'Olympia', 'Biddle', '267-333-0000', 'osb@gmail.com', 'demo_2022');
+insert into customers(id, first_name, last_name, phone_number, email, password) values(2, 'James', 'Biddle', '267-215-0000', 'jjb@gmail.com', 'schola_2022');

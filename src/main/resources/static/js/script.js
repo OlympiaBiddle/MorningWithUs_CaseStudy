@@ -25,3 +25,17 @@ function fadeOut(){
 }
 
 window.onload = fadeOut;
+
+//checks if password and confirm password are equal
+function checkPasswordMatch(){
+	if(document.getElementById('password').value !=
+		document.getElementById('confirmPassword').value){
+		document.getElementById('password').style.color = 'red';
+		document.getElementById('confirmPassword').style.color = 'red';
+		confirmPassword.setCustomValidity("Passwords do not match!");
+	}else{
+		document.getElementById('password').style.color = 'green';
+		document.getElementById('confirmPassword').style.color = 'green';
+		confirmPassword.setCustomValidity("");
+	}
+}

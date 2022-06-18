@@ -88,6 +88,9 @@ public class Customer {
 		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
 	}
 
+	/*base equality on the id of the objects so that id
+	 * property that was added that identifies it to 
+	 * a database record recognizes it as the same object */
 	@Override
 	public int hashCode() {
 		return Objects.hash(email, firstName, id, lastName);
